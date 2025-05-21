@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useNavigate } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import { useAuth } from './AuthContext';
 
 // Correct marker icon configuration
 delete L.Icon.Default.prototype._getIconUrl;
@@ -14,6 +15,7 @@ L.Icon.Default.mergeOptions({
 
 function Homepage() {
   const navigate = useNavigate();
+  const { auth } = useAuth();
   
   // More precise coordinates for Atal Tunnel
   const TunnelCoords = [32.4026, 77.2063]; // Updated central coordinates
@@ -28,11 +30,20 @@ function Homepage() {
     { id: 6, position: [32.4200, 77.2300], label: 'North Portal - Booster Fan 2' },
   ];
  
+const handleMarkerClick = (id) => {
+  if(auth.role === 'admin'){
+    navigate(`/dashboard`);
+  } else {
+    alert('Only Admin Can Access This Page.');
+  }
+};
+
   return (
     <MapContainer 
+       id='map'
       style={{ height: 'calc(100vh - 50px)', width: '100%' }} 
       center={TunnelCoords} 
-      zoom={13} // Slightly reduced zoom for better context
+      zoom={14} 
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -43,7 +54,8 @@ function Homepage() {
           key={marker.id}
           position={marker.position}
           eventHandlers={{
-            click: () => navigate(`/mqtt/${marker.id}`),
+            // click: () => navigate(`/mqtt/${marker.id}`),
+            click: () => handleMarkerClick(marker.id),
           }}
         >
           <Popup>{marker.label}</Popup>

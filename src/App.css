@@ -13,12 +13,12 @@ body {
     align-items: center;
     padding: 10px 20px;
     background: linear-gradient(90deg, #4a90e2, #0077b6);
-    color: white;
+    color: black;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .taskbar a {
-    color: white;
+    color: black;
     text-decoration: none;
     margin: 0 10px;
     font-weight: 500;
