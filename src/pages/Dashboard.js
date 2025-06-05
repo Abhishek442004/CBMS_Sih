@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import MQTTPage from "./MQTTPage";
 
 // Connect to the backend server
-const socket = io("http://localhost:5000");
+const socket = io("https://cbms-backend.onrender.com");
 
 const Dashboard = () => {
   const [dataString, setDataString] = useState(
