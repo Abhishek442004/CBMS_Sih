@@ -25,7 +25,7 @@ ChartJS.register(annotationPlugin);
 
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend);
 
-const socket = io("http://localhost:5000");
+const socket = io("https://cbms-backend.onrender.com");
 
 
 function MQTTPage() {
