@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -31,12 +31,12 @@ body {
       text-align: justify;
       text-align: center;
       padding: 0px 60px;
-      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
       word-spacing: 10px;
       background-color: white;
 
   }
-  /* Navbar */
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -82,9 +82,6 @@ body {
     transition: color 0.3s ease; 
 }
 
-/* .nav-links li:hover {
-    color: #f0a500; /* Change text color on hover 
-} */
 
  .homebtn , .motorsbtn , .aboutbtn {
    background-color: #f0a500;
@@ -107,7 +104,7 @@ body {
     cursor: pointer;
   }
   
-  /* Main Section */
+
   .main-section {
     display: flex;
     justify-content:space-between;
@@ -177,4 +174,219 @@ body {
   }
 .footer strong {
     color: #f0a500; }
-  
+   */
+
+
+
+
+
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #0d0d0d;
+}
+
+.homepage {
+  position: relative;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+/* Video Background */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00f0ff, #ff00cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #111;
+  color: #f0a500;
+  border: 1px solid #f0a500;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.nav-btn:hover {
+  background-color: #f0a500;
+  color: black;
+}
+
+.sign-in {
+  background-color: #f0a500;
+  color: black;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sign-in:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Main Section */
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
+  min-height: 80vh;
+}
+
+.text-content {
+  max-width: 50%;
+}
+
+.text-content h2 {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #00f0ff;
+}
+
+.get-started {
+  background-color: #f0a500;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.get-started:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.image-content img {
+  width: 300px;
+  height: auto;
+}
+
+/* Vision Section */
+.vision {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(240, 165, 0, 0.2);
+  text-align: center;
+}
+
+.vision h1 {
+  font-size: 2rem;
+  color: #f0a500;
+}
+
+.vision p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 50px;
+  z-index: 2;
+}
+
+.footer strong {
+  color: #f0a500;
+}
+
+.feedback {
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1.2s ease forwards;
+}
+.fade-in-right {
+  animation: fadeInRight 1.2s ease forwards;
+}
+.fade-in-up {
+  animation: fadeInUp 1.2s ease forwards;
+}
