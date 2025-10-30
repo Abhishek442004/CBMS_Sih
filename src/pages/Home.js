@@ -156,7 +156,7 @@ function Home() {
         <div className="feedback">
           <FeedbackForm />
         </div>
-        <p className="teamCredit">Designed and Developed by <strong>Team Voltaces</strong></p>
+        <p className="teamCredit">Designed and Developed by <strong>MAS</strong></p>
       </footer>
     </div>
   );
