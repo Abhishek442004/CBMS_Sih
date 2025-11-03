@@ -203,7 +203,7 @@ const Mlresponse = () => {
         throw new Error("One or more parameters are missing or invalid");
       }
 
-      const ML_URL = `http://127.0.0.1:8000/predict?RPM=${RPM}&Current_PhaseA=${Current_PhaseA}&Current_PhaseB=${Current_PhaseB}&Current_PhaseC=${Current_PhaseC}&Voltage_PhaseA=${Voltage_PhaseA}&Voltage_PhaseB=${Voltage_PhaseB}&Voltage_PhaseC=${Voltage_PhaseC}&Temperature=${Temperature}&Vibration_X=${Vibration_X}&Vibration_Y=${Vibration_Y}&Vibration_Z=${Vibration_Z}&Acoustic=${Acoustic}`;
+      const ML_URL = `https://cbms-ml-model.onrender.com/predict?RPM=${RPM}&Current_PhaseA=${Current_PhaseA}&Current_PhaseB=${Current_PhaseB}&Current_PhaseC=${Current_PhaseC}&Voltage_PhaseA=${Voltage_PhaseA}&Voltage_PhaseB=${Voltage_PhaseB}&Voltage_PhaseC=${Voltage_PhaseC}&Temperature=${Temperature}&Vibration_X=${Vibration_X}&Vibration_Y=${Vibration_Y}&Vibration_Z=${Vibration_Z}&Acoustic=${Acoustic}`;
       console.log("Prediction URL:", ML_URL);
 
       const response = await fetch(ML_URL);
