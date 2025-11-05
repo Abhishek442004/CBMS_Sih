@@ -1,0 +1,58 @@
+/* Carbon Black Dashboard Theme - Matte Gauges */
+
+.dashboard-container {
+  background-color: #0d0d0d;
+  min-height: 100vh;
+  padding: 20px;
+  color: #e6e6e6;
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #111;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.gauge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  gap: 25px;
+  width: 100%;
+  justify-items: center;
+}
+
+.gauge-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease;
+}
+
+.gauge-card:hover {
+  transform: translateY(-5px);
+}
+
+.gauge-label {
+  margin-bottom: 10px;
+  color: #e6e6e6;
+  font-size: 18px;
+}
+
+.gauge-value {
+  margin-top: 10px;
+  color: #bbbbbb;
+  font-size: 16px;
+}
+
+.mqtt-section {
+  margin-top: 50px;
+}
