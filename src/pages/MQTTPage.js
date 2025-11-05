@@ -14,7 +14,7 @@ import {
   Legend,
 } from "chart.js";
 import annotationPlugin from "chartjs-plugin-annotation";
-import "./MQTTPage_dark.css";
+import "./MQTTPage.css";
 
 ChartJS.register(annotationPlugin);
 ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend);
